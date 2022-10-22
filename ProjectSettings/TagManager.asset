@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SnapCube
+  - Saucers
+  - ExcludeTeleport
+  - Leg
+  - Arm
+  - SnapCylinder
+  - Torso
+  - Head
+  - Hole
+  - Bracket
+  - Bolt
+  - Switch
+  - Switch bolt
+  - Switch back right
+  - Switch front
+  - Switch back
+  - Switch back left
+  - 3
+  - Switch front bolt
+  - Panel
+  - Bracket big
+  - TeleportIgnore
+  - Stringer
+  - 1
+  - 2
+  - 4
+  - Clamp
+  - Knit
+  - Boltik
+  - Top knit
+  - Lower knit
+  - Obod
+  - Posters
+  - UI
+  - Description
+  - StringerBoltik
+  - obodboltik
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
