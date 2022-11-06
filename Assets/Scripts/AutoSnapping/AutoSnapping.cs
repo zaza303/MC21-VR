@@ -29,24 +29,33 @@ public class AutoSnapping : MonoBehaviour
     {
         SnapButton.interactable = value;
     }
+    private void SnappingObject(GameObject obj, GameObject dropZones)
+    {
+        dropZones.GetComponent<VRTK_SnapDropZone>().ForceSnap(obj);
+        dropZones.GetComponent<DropZoneBase>().SetCurrentSnappedObject(obj);
 
-
+        obj.GetComponent<Collider>().enabled = false;
+    }
     public void AutoSnapOblects(List<DropZoneBase> dropZoneBases, DropManager dropManager)
     {
         for (int i = 0; i < dropZoneBases.Count; i++)
         {
             DropZoneBase zone = dropZoneBases[i];
+            
             GameObject snapObject = ObjectsToSnap.Where(x => x.GetComponent<ObjectsArrowController>().isClosed == false && 
                 x.tag == zone.GetComponent<VRTK_SnapDropZone>().highlightObjectPrefab.tag).FirstOrDefault();
+            //просто выделил для себя, что заменил
+            var interactSnapObject = snapObject.GetComponent<InteractableObject>();
+            //
 
-            if (snapObject == null)
-                continue;
+            if (snapObject == null) continue;
 
             zone.SnapDropZone.ForceSnap(snapObject);
             zone.SetCurrentSnappedObject(snapObject);
 
-            snapObject.GetComponent<InteractableObject>().SnapDropZone = zone.SnapDropZone;
-            snapObject.GetComponent<InteractableObject>().IsSnapped = true;
+            
+            interactSnapObject.SnapDropZone = zone.SnapDropZone;
+            interactSnapObject.IsSnapped = true;
 
             zone.SetColliderHighlightActive(false);
             if (gameManager.CurrentMode == GameMode.TrainingMode)
@@ -55,23 +64,31 @@ public class AutoSnapping : MonoBehaviour
             if (zone.HaveAdditional)
             {
                 var dropZones = zone.GetComponent<NotOrderList>().NextDropZones;
-
+                //попробовать заменить на switch
                 if (dropZones.Count == 4)
                 {
                     foreach (var boltZone in dropZones)
                     {
                         var bolt = Instantiate(Bolt);
-                        boltZone.GetComponent<VRTK_SnapDropZone>().ForceSnap(bolt);
+                        //убрал повторения постоянного поиска компонента
+                        //зона соприкосновения????
+                        var boltZoneComponentVRTK = boltZone.GetComponent<VRTK_SnapDropZone>();
+                        //не в курсе что делает, но судя по всему это сам болтик как объект
+                        var interactBolt = bolt.GetComponent<InteractableObject>();
+                        //
+                        boltZoneComponentVRTK.ForceSnap(bolt);
                         boltZone.GetComponent<DropZoneBase>().SetCurrentSnappedObject(bolt);
 
-                        bolt.GetComponent<InteractableObject>().SnapDropZone = boltZone.GetComponent<VRTK_SnapDropZone>();
-                        bolt.GetComponent<InteractableObject>().IsSnapped = true;
+                        interactBolt.SnapDropZone = boltZone.GetComponent<VRTK_SnapDropZone>();
+                        interactBolt.IsSnapped = true;
 
                         bolt.GetComponent<Collider>().enabled = false;
                         if (gameManager.CurrentMode == GameMode.CheckMode)
                         {
-                            boltZone.GetComponent<VRTK_SnapDropZone>().ObjectUnsnappedFromDropZone -= ((CheckDropManager)dropManager).ExitedSnapDropZone;
-                            boltZone.GetComponent<VRTK_SnapDropZone>().ObjectSnappedToDropZone -= ((CheckDropManager)dropManager).EnteredSnapDropZone;
+                            //можно и это заменить на функцию, но пусть пока будет
+                            boltZoneComponentVRTK.ObjectUnsnappedFromDropZone -= ((CheckDropManager)dropManager).ExitedSnapDropZone;
+                            boltZoneComponentVRTK.ObjectSnappedToDropZone -= ((CheckDropManager)dropManager).EnteredSnapDropZone;
+
                             zone.SnapDropZone.ObjectUnsnappedFromDropZone -= ((CheckDropManager)dropManager).ExitedSnapDropZone;
                             zone.SnapDropZone.ObjectSnappedToDropZone -= ((CheckDropManager)dropManager).EnteredSnapDropZone;
                         }
@@ -83,17 +100,14 @@ public class AutoSnapping : MonoBehaviour
                     {
                         Destroy(zone.GetComponent<NotOrderList>());
                         zone.HaveAdditional = false;
-
+                        //заменил на функцию
                         var boltik1 = Instantiate(StringerBoltik, snapObject.gameObject.transform);
-                        dropZones[0].GetComponent<VRTK_SnapDropZone>().ForceSnap(boltik1);
-                        dropZones[0].GetComponent<DropZoneBase>().SetCurrentSnappedObject(boltik1);
-
+                        
+                        SnappingObject(boltik1, dropZones[0]);
                         var boltik2 = Instantiate(StringerBoltik, snapObject.gameObject.transform);
-                        dropZones[1].GetComponent<VRTK_SnapDropZone>().ForceSnap(boltik2);
-                        dropZones[1].GetComponent<DropZoneBase>().SetCurrentSnappedObject(boltik2);
-
-                        boltik1.GetComponent<Collider>().enabled = false;
-                        boltik2.GetComponent<Collider>().enabled = false;
+                        
+                        SnappingObject(boltik2, dropZones[1]);
+                        
                     }
                     else if (dropZones[0].tag == "obodboltik")
                     {
@@ -101,16 +115,12 @@ public class AutoSnapping : MonoBehaviour
                         zone.HaveAdditional = false;
 
                         var boltik1 = Instantiate(ObodBoltik, snapObject.gameObject.transform);
-                        dropZones[0].GetComponent<VRTK_SnapDropZone>().ForceSnap(boltik1);
-                        dropZones[0].GetComponent<DropZoneBase>().SetCurrentSnappedObject(boltik1);
-
+                        
+                        SnappingObject(boltik1, dropZones[0]);
                         var boltik2 = Instantiate(ObodBoltik, snapObject.gameObject.transform);
-                        dropZones[1].GetComponent<VRTK_SnapDropZone>().ForceSnap(boltik2);
-                        dropZones[1].GetComponent<DropZoneBase>().SetCurrentSnappedObject(boltik2);
-
-                        boltik1.GetComponent<Collider>().enabled = false;
-                        boltik2.GetComponent<Collider>().enabled = false;
-
+                        
+                        SnappingObject(boltik2, dropZones[1]);
+                       
 
                     }
                     else
@@ -119,15 +129,12 @@ public class AutoSnapping : MonoBehaviour
                         zone.HaveAdditional = false;
 
                         var smallBolt = Instantiate(SmallSwithBoltBolt);
-                        dropZones[0].GetComponent<VRTK_SnapDropZone>().ForceSnap(smallBolt);
-                        dropZones[0].GetComponent<DropZoneBase>().SetCurrentSnappedObject(smallBolt);
-
+                        
+                        SnappingObject(smallBolt, dropZones[0]);
                         var bigBolt = Instantiate(BigSwitchBolt);
-                        dropZones[1].GetComponent<VRTK_SnapDropZone>().ForceSnap(bigBolt);
-                        dropZones[1].GetComponent<DropZoneBase>().SetCurrentSnappedObject(bigBolt);
-
-                        smallBolt.GetComponent<Collider>().enabled = false;
-                        bigBolt.GetComponent<Collider>().enabled = false;
+                        
+                        SnappingObject(bigBolt, dropZones[1]);
+                        
                     }
 
                     //fix DiscardWrongObj error 
@@ -135,16 +142,20 @@ public class AutoSnapping : MonoBehaviour
                     {
                         var dropzone0Snap = dropZones[0].GetComponent<VRTK_SnapDropZone>();
                         var dropzone1Snap = dropZones[1].GetComponent<VRTK_SnapDropZone>();
+
                         dropzone0Snap.GetComponent<VRTK_SnapDropZone>().ObjectSnappedToDropZone -= ((CheckDropManager)dropManager).EnteredSnapDropZone;
-                        dropzone1Snap.GetComponent<VRTK_SnapDropZone>().ObjectSnappedToDropZone -= ((CheckDropManager)dropManager).EnteredSnapDropZone;
                         dropzone0Snap.ObjectUnsnappedFromDropZone -= ((CheckDropManager)dropManager).ExitedSnapDropZone;
+
+                        dropzone1Snap.GetComponent<VRTK_SnapDropZone>().ObjectSnappedToDropZone -= ((CheckDropManager)dropManager).EnteredSnapDropZone;
                         dropzone1Snap.ObjectUnsnappedFromDropZone -= ((CheckDropManager)dropManager).ExitedSnapDropZone;
+
                         zone.SnapDropZone.ObjectUnsnappedFromDropZone -= ((CheckDropManager)dropManager).ExitedSnapDropZone;
                         zone.SnapDropZone.ObjectSnappedToDropZone -= ((CheckDropManager)dropManager).EnteredSnapDropZone;
                     }
                 }
                 else if (dropZones.Count == 18)
                 {
+                    //к чему эта строка, если компоненты просто чистятся потом?
                     zone.GetComponent<ObodsNotOrder>().GetAllNextDropZones();
                     dropZones = zone.GetComponent<ObodsNotOrder>().NextDropZones;
 
@@ -155,9 +166,8 @@ public class AutoSnapping : MonoBehaviour
                     foreach (var boltZone in dropZones)
                     {
                         var boltik = Instantiate(Boltik);
-                        boltZone.GetComponent<VRTK_SnapDropZone>().ForceSnap(boltik);
-                        boltZone.GetComponent<DropZoneBase>().SetCurrentSnappedObject(boltik);
-                        boltik.GetComponent<Collider>().enabled = false;
+                        
+                        SnappingObject(boltik, boltZone);
 
                         //fix DiscardWrongObj error 
                         if (gameManager.CurrentMode == GameMode.CheckMode)
@@ -188,8 +198,8 @@ public class AutoSnapping : MonoBehaviour
                     foreach (var boltZone in dropZones)
                     {
                         var boltik = Instantiate(Boltik, snapObject.gameObject.transform);
-                        boltZone.GetComponent<VRTK_SnapDropZone>().ForceSnap(boltik);
-                        boltZone.GetComponent<DropZoneBase>().SetCurrentSnappedObject(boltik);
+                        
+                        SnappingObject(boltik, boltZone);
                         boltik.GetComponent<Collider>().enabled = false;
 
                         //fix DiscardWrongObj error 
