@@ -191,4 +191,9 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public void test()
+    {
+        Debug.Log("работает");
+    }
 }
