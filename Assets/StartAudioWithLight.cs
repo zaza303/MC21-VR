@@ -8,13 +8,21 @@ public class StartAudioWithLight : MonoBehaviour
 {
     public GameObject SpotLight;
     public GameObject Sound;
+    public GameObject NextDesk;
+
     private Light light;
     private AudioSource audio;
+    private float audioLength;
+
     // Start is called before the first frame update
     void Start()
     {
         light = SpotLight.GetComponent<Light>();
         audio = Sound.GetComponent<AudioSource>();
+        audioLength = audio.clip.length;
+
+        light.gameObject.SetActive(false);
+        NextDesk.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,11 +30,13 @@ public class StartAudioWithLight : MonoBehaviour
     {
         if (!audio.isPlaying) audio.Play();
         else audio.Stop();
-
+        Invoke("TurnOnLight", audioLength);
 
     }
-    public void Update()
+
+    void TurnOnLight()
     {
-        light.intensity = audio.isPlaying ? 0 : 2;
+        light.gameObject.SetActive(true);
+        NextDesk.gameObject.SetActive(true);
     }
 }
