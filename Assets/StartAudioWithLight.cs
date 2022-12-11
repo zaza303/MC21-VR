@@ -12,9 +12,11 @@ public class StartAudioWithLight : MonoBehaviour
     public GameObject NextDesk;
     public GameObject Robot;
     public Transform[] WayPoints;
+    public AudioClip SecondClip;
 
     private Light light;
-    private AudioSource audio;
+    private AudioSource robotAudio;
+    private AudioClip clip;
     private float audioLength;
     private Animator anim;
     private Vector3 initialScale;
@@ -23,30 +25,32 @@ public class StartAudioWithLight : MonoBehaviour
     void Start()
     {
         light = SpotLight.GetComponent<Light>();
-        audio = Sound.GetComponent<AudioSource>();
-        audioLength = audio.clip.length;
+        clip = Sound.GetComponent<AudioSource>().clip;
+        robotAudio = Robot.GetComponent<AudioSource>();
+
+        audioLength = clip.length;
         anim = Robot.GetComponent<Animator>();
 
         initialScale = NextDesk.transform.localScale;
         NextDesk.transform.localScale = new Vector3(0, 0, 0);
         light.gameObject.SetActive(false);
-        //NextDesk.gameObject.SetActive(false); 
     }
 
     public void BClick()
     {
-        if (!audio.isPlaying)
+        if (!robotAudio.isPlaying)
         {
             var robotAI = Robot.GetComponent<AI_Enemy>();
             robotAI.WayPoints = WayPoints;
             robotAI.StartWalking();
 
             Invoke("TurnOnLight", audioLength);
-            audio.Play();
+            robotAudio.clip = clip;
+            robotAudio.Play();
         }
         else {
             TurnOnLight();
-            audio.Stop();
+            robotAudio.Stop();
         }
         
         anim.SetBool("isWalking", true);
@@ -57,6 +61,10 @@ public class StartAudioWithLight : MonoBehaviour
     {
         light.gameObject.SetActive(true);
         NextDesk.transform.localScale = initialScale;
-        //NextDesk.gameObject.SetActive(true);
+        if (SecondClip != null)
+        {
+            robotAudio.clip = SecondClip;
+            robotAudio.Play();
+        }
     }
 }
