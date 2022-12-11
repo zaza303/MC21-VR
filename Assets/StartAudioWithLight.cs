@@ -31,25 +31,11 @@ public class StartAudioWithLight : MonoBehaviour
     // Update is called once per frame
     public void BClick()
     {
-<<<<<<< Updated upstream
         if (!audio.isPlaying) audio.Play();
         else audio.Stop();
         Invoke("TurnOnLight", audioLength);
         anim.SetBool("isWalking", true);
         anim.SetBool("isIdle", false);
-=======
-        if (!audio.isPlaying) {
-            Invoke("TurnOnLight", audioLength);
-            audio.Play(); 
-        }
-        else
-        {
-            audio.Stop();
-            TurnOnLight();
-        }
-        
-
->>>>>>> Stashed changes
     }
 
     void TurnOnLight()
