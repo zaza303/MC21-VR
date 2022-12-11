@@ -39,15 +39,27 @@ public class AI_Enemy : MonoBehaviour
 
         if (anim.GetBool("isWalking"))
         {
-            target = WayPoints[currentWayPoint];
             if (distance <= StopDistance)
             {
-                currentWayPoint = (currentWayPoint + 1) % WayPoints.Length;
-                anim.SetBool("isWalking", false);
-                anim.SetBool("isIdle", true);
+                currentWayPoint++;
+                if (currentWayPoint >= WayPoints.Length)
+                {
+                    anim.SetBool("isWalking", false);
+                    anim.SetBool("isIdle", true);
+                } else
+                {
+                    target = WayPoints[currentWayPoint];
+                }
             }
         }
-
         navMesh.SetDestination(target.position);
+    }
+
+    public void StartWalking()
+    {
+        currentWayPoint = 0;
+        target = WayPoints[currentWayPoint];
+        anim.SetBool("isWalking", true);
+        anim.SetBool("isIdle", false);
     }
 }
