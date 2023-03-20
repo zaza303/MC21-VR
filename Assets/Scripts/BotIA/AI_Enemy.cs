@@ -11,13 +11,14 @@ public class AI_Enemy : MonoBehaviour
 {
     public Transform[] WayPoints;
     public int Speed = 5;
-    public float StopDistance = 0.3f;
+    public float StopDistance = 0.1f;
 
     private int currentWayPoint = 0;
     private NavMeshAgent navMesh;
     private Rigidbody rigidBody;
     private Animator anim;
     private Transform target;
+    private float idleSpeed;
 
     void Start()
     {
@@ -28,28 +29,29 @@ public class AI_Enemy : MonoBehaviour
         rigidBody.freezeRotation = true;
 
         target = WayPoints[currentWayPoint];
+        idleSpeed = anim.speed;
     }
 
     void Update()
     {
         navMesh.acceleration = Speed;
         navMesh.stoppingDistance = StopDistance;
+        anim.speed = navMesh.velocity.magnitude / 3;
 
         float distance = Vector3.Distance(transform.position, target.position);
 
-        if (anim.GetBool("isWalking"))
+        if (anim.GetBool("isWalking") && distance <= StopDistance)
         {
-            if (distance <= StopDistance)
+            currentWayPoint++;
+            if (currentWayPoint >= WayPoints.Length)
             {
-                currentWayPoint++;
-                if (currentWayPoint >= WayPoints.Length)
-                {
-                    anim.SetBool("isWalking", false);
-                    anim.SetBool("isIdle", true);
-                } else
-                {
-                    target = WayPoints[currentWayPoint];
-                }
+                anim.SetBool("isWalking", false);
+                anim.SetBool("isIdle", true);
+                anim.speed = idleSpeed;
+            }
+            else
+            {
+                target = WayPoints[currentWayPoint];
             }
         }
         navMesh.SetDestination(target.position);
