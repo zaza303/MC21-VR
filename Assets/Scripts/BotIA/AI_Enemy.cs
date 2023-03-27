@@ -16,38 +16,38 @@ public class AI_Enemy : MonoBehaviour
     private int currentWayPoint = 0;
     private NavMeshAgent navMesh;
     private Rigidbody rigidBody;
-    private Animator anim;
+    private Animator animator;
     private Transform target;
     private float idleSpeed;
 
     void Start()
     {
-        anim = this.GetComponent<Animator>();
+        animator = this.GetComponent<Animator>();
         navMesh = GetComponent<NavMeshAgent>();
         rigidBody = GetComponent<Rigidbody>();
 
         rigidBody.freezeRotation = true;
 
         target = WayPoints[currentWayPoint];
-        idleSpeed = anim.speed;
+        idleSpeed = animator.speed;
     }
 
     void Update()
     {
-        navMesh.acceleration = Speed;
+        //navMesh.acceleration = Speed;
         navMesh.stoppingDistance = StopDistance;
-        anim.speed = navMesh.velocity.magnitude / 3;
+        //animator.speed = navMesh.velocity.magnitude / 3;
 
         float distance = Vector3.Distance(transform.position, target.position);
 
-        if (anim.GetBool("isWalking") && distance <= StopDistance)
+        if (animator.GetBool("isWalking") && distance <= StopDistance)
         {
             currentWayPoint++;
             if (currentWayPoint >= WayPoints.Length)
             {
-                anim.SetBool("isWalking", false);
-                anim.SetBool("isIdle", true);
-                anim.speed = idleSpeed;
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isIdle", true);
+                animator.speed = idleSpeed;
             }
             else
             {
@@ -61,7 +61,7 @@ public class AI_Enemy : MonoBehaviour
     {
         currentWayPoint = 0;
         target = WayPoints[currentWayPoint];
-        anim.SetBool("isWalking", true);
-        anim.SetBool("isIdle", false);
+        animator.SetBool("isWalking", true);
+        animator.SetBool("isIdle", false);
     }
 }
