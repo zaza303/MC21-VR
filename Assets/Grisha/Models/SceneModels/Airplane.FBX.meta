@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 5bc1bcde715b73a48b943844663147a9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: mc21
+    100004: mc21Windows
+    100006: Platform1
+    100008: Platform2
+    100010: StairsSmall
+    100012: StairsSmall2
+    100014: Stoika1
+    100016: Stoika2
+    100018: Crane
+    100020: Floor
+    100022: Group019
+    100024: MainGlass
+    100026: RC
+    100028: Roof
+    100030: RoofGlass
+    100032: WallPart1
+    100034: WallPart2
+    100036: Walls
+    400000: //RootNode
+    400002: mc21
+    400004: mc21Windows
+    400006: Platform1
+    400008: Platform2
+    400010: StairsSmall
+    400012: StairsSmall2
+    400014: Stoika1
+    400016: Stoika2
+    400018: Crane
+    400020: Floor
+    400022: Group019
+    400024: MainGlass
+    400026: RC
+    400028: Roof
+    400030: RoofGlass
+    400032: WallPart1
+    400034: WallPart2
+    400036: Walls
+    2100000: Platform1Mat
+    2100002: StoikaMat
+    2100004: platform2Mat
+    2100006: mc21Mat
+    2100008: GlassMat
+    2300000: mc21
+    2300002: mc21Windows
+    2300004: Platform1
+    2300006: Platform2
+    2300008: StairsSmall
+    2300010: StairsSmall2
+    2300012: Stoika1
+    2300014: Stoika2
+    2300016: Crane
+    2300018: Floor
+    2300020: MainGlass
+    2300022: Roof
+    2300024: RoofGlass
+    2300026: WallPart1
+    2300028: WallPart2
+    2300030: Walls
+    3300000: mc21
+    3300002: mc21Windows
+    3300004: Platform1
+    3300006: Platform2
+    3300008: StairsSmall
+    3300010: StairsSmall2
+    3300012: Stoika1
+    3300014: Stoika2
+    3300016: Crane
+    3300018: Floor
+    3300020: MainGlass
+    3300022: Roof
+    3300024: RoofGlass
+    3300026: WallPart1
+    3300028: WallPart2
+    3300030: Walls
+    4300000: Platform1
+    4300002: Stoika1
+    4300004: Platform2
+    4300006: mc21
+    4300008: mc21Windows
+    4300010: Stoika2
+    4300012: StairsSmall
+    4300014: StairsSmall2
+    4300016: Walls
+    4300018: MainGlass
+    4300020: WallPart1
+    4300022: WallPart2
+    4300024: Roof
+    4300026: RoofGlass
+    4300028: Crane
+    4300030: Floor
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: ae78d3df319ded6498f53b2abf17fae7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlueMat
+    second: {fileID: 2100000, guid: 8ee3a7042be336c4fb8dbdebe6fe279c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ConcreteMat
+    second: {fileID: 2100000, guid: e7777581cd7f2d54e87c994310edd238, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GlassMat
+    second: {fileID: 2100000, guid: d1236b8c04b08534f80ae9b2433b10cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreyMat
+    second: {fileID: 2100000, guid: 5ba2b8d0529000c42a52ff3df772fc74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMat
+    second: {fileID: 2100000, guid: 5baec611e3c75254b9e31cd5fae4458c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Platform1Mat
+    second: {fileID: 2100000, guid: f463cc74ac50e6e449f1d884574f68df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoikaMat
+    second: {fileID: 2100000, guid: 0f4f2fa207bc5e842bbc4a869fed6731, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallBlue
+    second: {fileID: 2100000, guid: f70eee06adbe660419621091bc6ffe01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallWhite
+    second: {fileID: 2100000, guid: 4c3790ef477f7ac4288add80bad55b05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallWhiteMain
+    second: {fileID: 2100000, guid: 287015a97647e49498ff2694cd447ff4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mc21Mat
+    second: {fileID: 2100000, guid: 8396e4e8a4df93b499b84bf4e6e3806c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: platform2Mat
+    second: {fileID: 2100000, guid: 9d3262c60b84f36458564e8ce4f2205a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

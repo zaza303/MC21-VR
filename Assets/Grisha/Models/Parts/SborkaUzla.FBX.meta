@@ -1,0 +1,371 @@
+fileFormatVersion: 2
+guid: 63b61e1b5e9636a4f86a4cabc1972255
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Base
+    100002: BasePart1
+    100004: BasePart2
+    100006: BasePart3
+    100008: BasePart4
+    100010: BasePart4Link1
+    100012: BasePart4Link2
+    100014: BasePart4Link3
+    100016: BasePart4Link4
+    100018: //RootNode
+    100020: UzelBase
+    100022: UzelPart1
+    100024: UzelPart2
+    100026: UzelPart3
+    100028: UzelPart4
+    100030: "\u0422\u0432\u0435\u0440\u0434\u043E\u0435 \u0442\u0435\u043B\u043E584"
+    100032: BasePart31
+    100034: BasePart32
+    100036: BasePart33
+    100038: BasePart34
+    100040: BasePart4 1
+    100042: BasePart41
+    100044: BasePart41 1
+    100046: BasePart42
+    100048: BasePart43
+    100050: BasePart44
+    100052: BasePartBolt
+    100054: BasePart7
+    100056: BaseInt00
+    100058: BaseInt01
+    100060: BaseInt06
+    100062: BaseInt07
+    100064: BaseInt09
+    100066: BaseInt10
+    100068: BaseInt11
+    100070: BaseInt12
+    100072: BaseInt13
+    100074: BaseInt14
+    100076: BaseInt15
+    100078: BaseIntLink00
+    100080: BaseIntLink01
+    100082: BaseIntLink02
+    100084: BaseIntLink03
+    100086: BaseIntLink04
+    100088: Sborka00
+    100090: Sborka02
+    100092: Sborka03
+    100094: SborkaPart100
+    100096: SborkaPart101
+    100098: SborkaPart102
+    100100: SborkaPart103
+    100102: SborkaPart104
+    100104: SborkaPart105
+    400000: Base
+    400002: BasePart1
+    400004: BasePart2
+    400006: BasePart3
+    400008: BasePart4
+    400010: BasePart4Link1
+    400012: BasePart4Link2
+    400014: BasePart4Link3
+    400016: BasePart4Link4
+    400018: //RootNode
+    400020: UzelBase
+    400022: UzelPart1
+    400024: UzelPart2
+    400026: UzelPart3
+    400028: UzelPart4
+    400030: "\u0422\u0432\u0435\u0440\u0434\u043E\u0435 \u0442\u0435\u043B\u043E584"
+    400032: BasePart31
+    400034: BasePart32
+    400036: BasePart33
+    400038: BasePart34
+    400040: BasePart4 1
+    400042: BasePart41
+    400044: BasePart41 1
+    400046: BasePart42
+    400048: BasePart43
+    400050: BasePart44
+    400052: BasePartBolt
+    400054: BasePart7
+    400056: BaseInt00
+    400058: BaseInt01
+    400060: BaseInt06
+    400062: BaseInt07
+    400064: BaseInt09
+    400066: BaseInt10
+    400068: BaseInt11
+    400070: BaseInt12
+    400072: BaseInt13
+    400074: BaseInt14
+    400076: BaseInt15
+    400078: BaseIntLink00
+    400080: BaseIntLink01
+    400082: BaseIntLink02
+    400084: BaseIntLink03
+    400086: BaseIntLink04
+    400088: Sborka00
+    400090: Sborka02
+    400092: Sborka03
+    400094: SborkaPart100
+    400096: SborkaPart101
+    400098: SborkaPart102
+    400100: SborkaPart103
+    400102: SborkaPart104
+    400104: SborkaPart105
+    2100000: 24 - Default
+    2300000: Base
+    2300002: BasePart1
+    2300004: BasePart2
+    2300006: BasePart3
+    2300008: BasePart4
+    2300010: BasePart4Link1
+    2300012: BasePart4Link2
+    2300014: BasePart4Link3
+    2300016: BasePart4Link4
+    2300018: UzelBase
+    2300020: UzelPart1
+    2300022: UzelPart2
+    2300024: UzelPart3
+    2300026: UzelPart4
+    2300028: "\u0422\u0432\u0435\u0440\u0434\u043E\u0435 \u0442\u0435\u043B\u043E584"
+    2300030: BasePart31
+    2300032: BasePart32
+    2300034: BasePart33
+    2300036: BasePart34
+    2300038: BasePart4 1
+    2300040: BasePart41
+    2300042: BasePart41 1
+    2300044: BasePart42
+    2300046: BasePart43
+    2300048: BasePart44
+    2300050: BasePartBolt
+    2300052: //RootNode
+    2300054: BasePart7
+    2300056: BaseInt00
+    2300058: BaseInt01
+    2300060: BaseInt06
+    2300062: BaseInt07
+    2300064: BaseInt09
+    2300066: BaseInt10
+    2300068: BaseInt11
+    2300070: BaseInt12
+    2300072: BaseInt13
+    2300074: BaseInt14
+    2300076: BaseInt15
+    2300078: BaseIntLink00
+    2300080: BaseIntLink01
+    2300082: BaseIntLink02
+    2300084: BaseIntLink03
+    2300086: BaseIntLink04
+    2300088: Sborka00
+    2300090: Sborka02
+    2300092: Sborka03
+    2300094: SborkaPart100
+    2300096: SborkaPart101
+    2300098: SborkaPart102
+    2300100: SborkaPart103
+    2300102: SborkaPart104
+    2300104: SborkaPart105
+    3300000: Base
+    3300002: BasePart1
+    3300004: BasePart2
+    3300006: BasePart3
+    3300008: BasePart4
+    3300010: BasePart4Link1
+    3300012: BasePart4Link2
+    3300014: BasePart4Link3
+    3300016: BasePart4Link4
+    3300018: UzelBase
+    3300020: UzelPart1
+    3300022: UzelPart2
+    3300024: UzelPart3
+    3300026: UzelPart4
+    3300028: "\u0422\u0432\u0435\u0440\u0434\u043E\u0435 \u0442\u0435\u043B\u043E584"
+    3300030: BasePart31
+    3300032: BasePart32
+    3300034: BasePart33
+    3300036: BasePart34
+    3300038: BasePart4 1
+    3300040: BasePart41
+    3300042: BasePart41 1
+    3300044: BasePart42
+    3300046: BasePart43
+    3300048: BasePart44
+    3300050: BasePartBolt
+    3300052: //RootNode
+    3300054: BasePart7
+    3300056: BaseInt00
+    3300058: BaseInt01
+    3300060: BaseInt06
+    3300062: BaseInt07
+    3300064: BaseInt09
+    3300066: BaseInt10
+    3300068: BaseInt11
+    3300070: BaseInt12
+    3300072: BaseInt13
+    3300074: BaseInt14
+    3300076: BaseInt15
+    3300078: BaseIntLink00
+    3300080: BaseIntLink01
+    3300082: BaseIntLink02
+    3300084: BaseIntLink03
+    3300086: BaseIntLink04
+    3300088: Sborka00
+    3300090: Sborka02
+    3300092: Sborka03
+    3300094: SborkaPart100
+    3300096: SborkaPart101
+    3300098: SborkaPart102
+    3300100: SborkaPart103
+    3300102: SborkaPart104
+    3300104: SborkaPart105
+    4300000: Base
+    4300002: BasePart1
+    4300004: BasePart3
+    4300006: BasePart2
+    4300008: BasePart4
+    4300010: UzelPart4
+    4300012: UzelPart3
+    4300014: BasePart4Link3
+    4300016: BasePart4Link4
+    4300018: BasePart4Link1
+    4300020: BasePart4Link2
+    4300022: "\u0422\u0432\u0435\u0440\u0434\u043E\u0435 \u0442\u0435\u043B\u043E584"
+    4300024: UzelBase
+    4300026: UzelPart1
+    4300028: UzelPart2
+    4300030: BasePart41
+    4300032: BasePart42
+    4300034: BasePart43
+    4300036: BasePart44
+    4300038: BasePart4
+    4300040: BasePart41
+    4300042: BasePartBolt
+    4300044: BasePart34
+    4300046: BasePart33
+    4300048: BasePart32
+    4300050: BasePart31
+    4300052: BasePart7
+    4300054: Sborka03
+    4300056: SborkaPart100
+    4300058: Sborka00
+    4300060: Sborka02
+    4300062: BaseInt00
+    4300064: BaseInt01
+    4300066: BaseIntLink04
+    4300068: BaseIntLink03
+    4300070: BaseIntLink00
+    4300072: BaseIntLink01
+    4300074: BaseInt06
+    4300076: BaseInt07
+    4300078: BaseIntLink02
+    4300080: BaseInt09
+    4300082: BaseInt10
+    4300084: BaseInt11
+    4300086: BaseInt12
+    4300088: BaseInt13
+    4300090: BaseInt14
+    4300092: BaseInt15
+    4300094: SborkaPart101
+    4300096: SborkaPart102
+    4300098: SborkaPart103
+    4300100: SborkaPart104
+    4300102: SborkaPart105
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 24 - Default
+    second: {fileID: 2100000, guid: aaf987f69b249e84db50ff3d7b2da5d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sborka2
+    second: {fileID: 2100000, guid: b08aff1383d1e5246974c7ffcb0531f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SborkaMat
+    second: {fileID: 2100000, guid: 1957493a7865b624db2323163755fbc3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
