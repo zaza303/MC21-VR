@@ -40,6 +40,10 @@ public class createDetail : MonoBehaviour {
         var text = CreateText(objectToSpawn.transform);
         objectToSpawn.GetComponent<ShowText>().FloatingText = text.gameObject;
         text.text = objectToSpawn.gameObject.name;
+        var offset = 0.3f;
+        var offsetOfModels = Mathf.Min(5, randomSpawnIndexes.Length);
+        var offsetAbsolute = new Vector3(objectToSpawn.transform.position.x + offset * (i - offsetOfModels), objectToSpawn.transform.position.y + offset, objectToSpawn.transform.position.z);
+        text.gameObject.transform.Translate(offsetAbsolute);
 
         spawnPoint.x += spawnOffsetX;
     }
@@ -48,7 +52,6 @@ public class createDetail : MonoBehaviour {
     {
         var canvasGameObject = new GameObject();
         canvasGameObject.transform.SetParent(parent, false);
-        canvasGameObject.transform.position = parent.position;
         var canvas = canvasGameObject.AddComponent<Canvas>();
         canvas.transform.localScale = Vector3.one / 180;
 

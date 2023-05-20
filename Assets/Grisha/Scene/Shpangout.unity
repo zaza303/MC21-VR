@@ -74226,11 +74226,13 @@ MonoBehaviour:
   spawnOffsetX: 0.5
   spawnPointInstr: {x: 9.4, y: 0.959, z: 9.2}
   Details:
-  - {fileID: 1902682581923192691, guid: 76d3d358757c0944a81038afc588bd0c, type: 3}
-  - {fileID: 1902682581923192691, guid: 76d3d358757c0944a81038afc588bd0c, type: 3}
+  - {fileID: 1236940380231376164, guid: a7b86bbf45504c74e9e27a8e1ffd781a, type: 3}
+  - {fileID: 7100465658817095347, guid: 80c8bc943f691784da20061eddcf025a, type: 3}
+  - {fileID: 5699203367481015227, guid: f23c1c6c850e258439a0c6be4370eb15, type: 3}
   Tools:
   - {fileID: 100000, guid: 1a30a6392bb5e424385d83fc20457d5d, type: 3}
-  - {fileID: 100000, guid: 1a30a6392bb5e424385d83fc20457d5d, type: 3}
+  - {fileID: 100000, guid: 3b4a75f92a9c971489e4c3e73775b49b, type: 3}
+  - {fileID: 100000, guid: dcdafbba549a61b41b28a913254e14b5, type: 3}
 --- !u!4 &2099646885
 Transform:
   m_ObjectHideFlags: 0
