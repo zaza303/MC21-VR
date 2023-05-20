@@ -41,6 +41,8 @@ TagManager:
   - Description
   - StringerBoltik
   - obodboltik
+  - Box1
+  - Box2
   layers:
   - Default
   - TransparentFX

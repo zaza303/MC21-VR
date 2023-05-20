@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/IdentUser.unity
-    guid: 0966bf37d37c12a4db47d2ca3e5e5181
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 75f2028546fabbc4ca49fc3986573064
+    path: Assets/Grisha/Scene/Menu.unity
+    guid: 5b1a85b0316e8104b9cca67643e72e61
   - enabled: 1
     path: Assets/Grisha/Scene/MainScene.unity
     guid: 327ff0568ecbcdf42ab1a5bd1057551c
   - enabled: 1
     path: Assets/Grisha/Scene/MainScene2.unity
     guid: 4809f69bbb7393a499832cfd18ea541c
+  - enabled: 1
+    path: Assets/Grisha/Scene/MainScene-Rib.unity
+    guid: 5a752eaea3807ee4986a74da594c6541
+  - enabled: 1
+    path: Assets/Grisha/Scene/Shpangout.unity
+    guid: 8bd3b1da6d28ff345b10ddb81f7c3698
   m_configObjects: {}
